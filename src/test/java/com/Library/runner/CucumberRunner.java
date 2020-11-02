@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         glue = "com/Library/stepDefinitions",
         dryRun = false,
         //tags =
-        publish = true
+        publish = true,
+        plugin = "html:target/cucumber-report.html"
 )
 
 public class CucumberRunner {

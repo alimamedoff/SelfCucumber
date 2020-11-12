@@ -47,5 +47,6 @@ public class LoginPage {
 
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
+
     }
 }

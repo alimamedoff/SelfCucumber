@@ -14,9 +14,11 @@ public class LoginPage {
     }
 
     @FindBy(id = "inputEmail")
-    WebElement username;
+    public WebElement username;
     @FindBy(id = "inputPassword")
-    WebElement password;
+    public WebElement password;
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement searchBox;
 
 
 
@@ -26,5 +28,24 @@ public class LoginPage {
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
 
+    }
+
+    public void login(String role) {
+        String usernameValue = "";
+        String passwordValue = "";
+
+        if (role.equalsIgnoreCase("librarian")) {
+            usernameValue = ConfigurationReader.getProperty("usernameLibrarian");
+            passwordValue = ConfigurationReader.getProperty("passwordLibrarian");
+        } else if (role.equalsIgnoreCase("student21")) {
+            usernameValue = ConfigurationReader.getProperty("usernameStudent21");
+            passwordValue = ConfigurationReader.getProperty("passwordStudent21");
+        } else {
+            usernameValue = ConfigurationReader.getProperty("usernameStudent22");
+            passwordValue = ConfigurationReader.getProperty("passwordStudent22");
+        }
+
+        username.sendKeys(usernameValue);
+        password.sendKeys(passwordValue, Keys.ENTER);
     }
 }

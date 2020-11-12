@@ -1,5 +1,7 @@
 Feature: Add Book
+
   Background: Login
+
   Scenario: As a User I should be able to add a book
 
     When User clicks Books module

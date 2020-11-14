@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources",
         glue = "com/Library/stepDefinitions",
-        dryRun = false,
-        tags ="@student21"
+        dryRun = true,
+        tags ="@add"
        // publish = true,
        // plugin = "html:target/cucumber-report.html"
 )

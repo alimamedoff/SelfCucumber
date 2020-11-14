@@ -8,17 +8,17 @@ Feature: Login feature
 
     @librarian
     Scenario: Login as a librarian
-      When user login as a librarian
+      When user logs in as a librarian
       Then dashboard should be displayed
 
     @student21
     Scenario: Login as a studentOne
-      When user login as a studentOne
+      When user logs in as a studentOne
       Then dashboard should be displayed
 
     @student22
     Scenario: Login as a studentTwo
-      When user login as a studentTwo
+      When user logs in as a studentTwo
       Then dashboard should be displayed
 
 

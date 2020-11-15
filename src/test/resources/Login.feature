@@ -21,4 +21,18 @@ Feature: Login feature
       When user logs in as a studentTwo
       Then dashboard should be displayed
 
+      @wip
+    Scenario: Table columns names
+      When user logs in as a librarian
+      And dashboard should be displayed
+      And User clicks "Books" module
+      Then table should have following column names:
+        | Actions     |
+        | ISBN        |
+        | Name        |
+        | Author      |
+        | Category    |
+        | Year        |
+        | Borrowed By |
+
 

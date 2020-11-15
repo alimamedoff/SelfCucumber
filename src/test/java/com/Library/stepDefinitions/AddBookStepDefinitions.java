@@ -10,7 +10,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class AddBookStepDefinitions {
     LibrarianBookManagementPage librarianBookManagementPage = new LibrarianBookManagementPage();
@@ -79,13 +84,17 @@ public class AddBookStepDefinitions {
 
     @Then("User should be able see the confirmation message The book has been created.")
     public void userShouldBeAbleSeeTheConfirmationMessageTheBookHasBeenCreated() {
-        alert = Driver.getDriver().switchTo().alert();
-        String expectedConformationMessageText = "The book has been created";
-        System.out.println("expectedConformationMessageText = " + expectedConformationMessageText);
-        String actualConformationMessageText = alert.getText();
-        System.out.println("actualConformationMessageText = " + actualConformationMessageText);
+        //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
+        //      alert = Driver.getDriver().switchTo().alert();
+        //        String expectedConformationMessageText = "The book has been created";
+        //        System.out.println("expectedConformationMessageText = " + expectedConformationMessageText);
+        //
+        //       // String actualConformationMessageText = alert.getText();
+        //        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath("div[@class='toast-message']"), expectedConformationMessageText));
+        //        String actualConformationMessageText =  addBookPage.confirmationMessage.getText();
+        //                System.out.println("actualConformationMessageText = " + actualConformationMessageText);
 
-        System.out.println("actualConformationMessageText = " + actualConformationMessageText);
+
         
     }
 

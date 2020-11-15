@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -22,6 +23,9 @@ public class LibrarianBookManagementPage extends BasePage {
 
    @FindBy(className = "form-control input-sm input-small input-inline")
     public WebElement searchBox;
+
+   @FindBy(tagName = "th")
+   public List<WebElement> tableHeaders;
 
    @FindBy(xpath = "//select[@id='book_categories']")
     public List<WebElement> bookCategoriesDropdown;

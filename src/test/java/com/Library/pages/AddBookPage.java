@@ -37,6 +37,9 @@ public class AddBookPage {
     @FindBy(xpath = "//button[@class='close']")
     public WebElement xBtn;
 
+    @FindBy(xpath = "div[@class='toast-message']")
+    public WebElement confirmationMessage;
+
 
 
 

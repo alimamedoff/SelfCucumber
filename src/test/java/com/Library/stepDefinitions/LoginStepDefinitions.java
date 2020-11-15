@@ -24,17 +24,17 @@ public class LoginStepDefinitions {
         String expectedTitle = "Library";
     }
 
-    @When("user login as a librarian")
+    @When("user logs in as a librarian")
     public void userLoginAsALibrarian() {
         loginPage.login("librarian");
     }
 
-    @When("user login as a studentOne")
+    @When("user logs in as a studentOne")
     public void userLoginAsAStudentOne() {
         loginPage.login("student21");
     }
 
-    @When("user login as a studentTwo")
+    @When("user logs in as a studentTwo")
     public void userLoginAsAStudentTwo() {
         loginPage.login("student22");
     }
@@ -43,8 +43,7 @@ public class LoginStepDefinitions {
     public void userLogsInAsA(String student) {
         loginPage.login("student21");
     }
-    @When("user finds desired {string}")
-    public void userFindsDesired(String book) {
-        loginPage.searchBox.sendKeys("The Idiot" + Keys.ENTER);
-    }
+
+
+
 }

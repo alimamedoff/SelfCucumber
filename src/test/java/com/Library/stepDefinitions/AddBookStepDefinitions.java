@@ -4,24 +4,28 @@ package com.Library.stepDefinitions;
 import com.Library.pages.AddBookPage;
 import com.Library.pages.LibrarianBookManagementPage;
 import com.Library.utils.BrowserUtils;
-import com.Library.utils.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
 
 public class AddBookStepDefinitions {
     LibrarianBookManagementPage librarianBookManagementPage = new LibrarianBookManagementPage();
     AddBookPage addBookPage = new AddBookPage();
     Select select;
     Alert alert;
+
+    @Then("User sees an Add Book box with Add Book title")
+    public void userSeesAnAddBookBoxWithAddBookTitle() {
+
+        String expectedTitle = "Add Book";
+        BrowserUtils.wait(2);
+        String actualTitle = addBookPage.AddBookTitle.getText();
+        Assert.assertEquals(expectedTitle,actualTitle);
+    }
 
     @When("User clicks {string} module")
     public void userClicksModule(String link) {
@@ -97,6 +101,7 @@ public class AddBookStepDefinitions {
 
         
     }
+
 
 
 }

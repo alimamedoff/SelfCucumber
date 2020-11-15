@@ -5,12 +5,17 @@ Feature: Add Book
     Given user is on the login page
     When user logs in as a librarian
     Then dashboard should be displayed
-
-  Scenario Outline: As a User I should be able to add a book
-
     When User clicks "Books" module
     Then User should be navigated to Book Management
     When User clicks Add book button
+
+  @wip
+  Scenario: As a User I should be able to see an Add Book box
+    Then User sees an Add Book box with Add Book title
+
+
+
+  Scenario Outline: As a User I should be able to add a book
     And User enters "<Book Name>", "<ISBN>", "<Year>", "<Author>", "<Description>" tables
     And User chooses "Romance" from Book Category
       #| Action and Adventure    |

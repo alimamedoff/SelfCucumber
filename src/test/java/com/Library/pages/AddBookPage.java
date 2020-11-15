@@ -10,6 +10,9 @@ public class AddBookPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "//h5[@class='modal-title']")
+    public WebElement AddBookTitle;
+
     @FindBy(xpath = "//input[@name='name']")
     public WebElement bookNameBox;
 

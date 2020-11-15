@@ -9,10 +9,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources",
         glue = "com/Library/stepDefinitions",
-        dryRun = true,
-        tags ="@add"
+        dryRun = false,
+        tags ="@add",
        // publish = true,
-       // plugin = "html:target/cucumber-report.html"
+        plugin = "html:target/cucumber-report.html"
 )
 
 public class CucumberRunner {

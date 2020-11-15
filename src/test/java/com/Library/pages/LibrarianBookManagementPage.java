@@ -8,20 +8,26 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class LibrarianBooksPage {
-   public LibrarianBooksPage(){
+public class LibrarianBookManagementPage extends BasePage {
+   public LibrarianBookManagementPage(){
        PageFactory.initElements(Driver.getDriver(), this);
    }
 
 
-   @FindBy(className = "btn btn-lg btn-outline btn-primary btn-sm add_book_btn")
+   @FindBy(tagName = "h3")
+   public WebElement header;
+
+   @FindBy(xpath = "//a[@class='btn btn-lg btn-outline btn-primary btn-sm add_book_btn']")
     public WebElement addBookBtn;
 
    @FindBy(className = "form-control input-sm input-small input-inline")
     public WebElement searchBox;
 
-   @FindBy()
-    public List<WebElement> bookCategories;
+   @FindBy(xpath = "//select[@id='book_categories']")
+    public List<WebElement> bookCategoriesDropdown;
+
+   @FindBy(xpath = "//select[@name='tbl_books_length']")
+    public WebElement showRecordsDropdown;
 
 
 
